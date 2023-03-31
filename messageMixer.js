@@ -37,9 +37,8 @@ function newMessage() {
     let y = Math.floor(Math.random()*3)
     let z = Math.floor(Math.random()*6)
     newText = newText.concat(start[x], ' ', mid[y], ' ', end[z])
-    console.log(newText)
-    //var elem = document.getElementById("logo")
-    //elem.textContent = newText;
+    var elem = document.getElementById("logo")
+    elem.textContent = newText;
 }
 
 newMessage();
