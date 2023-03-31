@@ -29,23 +29,17 @@ function newStyle() {
 }
 
 function newMessage() {
+    const start = ['Hello,', 'Hi,', 'Greetings,', 'Bonjour,', 'Welcome,', 'Hey,', 'Hi-ya,', 'Good Morning,']
+    const mid = ['wish you', 'give you', 'bless you', 'hope you have a']
+    const end = ['good day', 'beautiful day', 'amazing day', 'incredible day', 'wonderful day', 'fantastic day', 'sweet day']
     let newText = ''
-    let x = Math.floor(Math.random()*3)
-    switch(x){
-        case 0:
-            newText = "Siema mordo"
-            break;
-        case 1:
-            newText = "Elo mordo"
-            break;
-        case 2:
-            newText = "Czesc mordo"
-            break;
-    }
-    var elem = document.getElementById("logo")
-    function(event) {
-        if (event.onkeypress==32) {
-            elem.textContent = newText;
-        }
-    }
+    let x = Math.floor(Math.random()*7)
+    let y = Math.floor(Math.random()*3)
+    let z = Math.floor(Math.random()*6)
+    newText = newText.concat(start[x], ' ', mid[y], ' ', end[z])
+    console.log(newText)
+    //var elem = document.getElementById("logo")
+    //elem.textContent = newText;
 }
+
+newMessage();
